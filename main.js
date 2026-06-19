@@ -191,27 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
-            
-            // Hamburger animation
             hamburger.classList.toggle('toggle');
-            if (hamburger.classList.contains('toggle')) {
-                hamburger.children[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-                hamburger.children[1].style.opacity = '0';
-                hamburger.children[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-            } else {
-                hamburger.children[0].style.transform = 'none';
-                hamburger.children[1].style.opacity = '1';
-                hamburger.children[2].style.transform = 'none';
-            }
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 hamburger.classList.remove('toggle');
-                hamburger.children[0].style.transform = 'none';
-                hamburger.children[1].style.opacity = '1';
-                hamburger.children[2].style.transform = 'none';
             });
         });
     }

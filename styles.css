@@ -683,6 +683,18 @@ body.loaded .preloader-logo {
     transition: all 0.3s ease;
 }
 
+.hamburger.toggle .line1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.toggle .line2 {
+    opacity: 0;
+}
+
+.hamburger.toggle .line3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .mobile-menu {
     position: fixed;
     top: 0;
