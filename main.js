@@ -1,3 +1,11 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+    // Ensure the logo animation plays for at least 1.5 seconds before fading out
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 1500);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Sticky Header
     const header = document.getElementById('header');
@@ -33,15 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(element);
     });
 
-    // Form submission mock
+    // Form submission via FormSubmit
     const form = document.getElementById('booking-form');
+    
+    // Send inquiries directly to the company email
+    const COMPANY_EMAIL = "thekaliyanaakompany@gmail.com"; 
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = form.querySelector('.btn-submit');
         const originalText = btn.textContent;
         btn.textContent = 'Sending...';
-        
-        setTimeout(() => {
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch(`https://formsubmit.co/ajax/${COMPANY_EMAIL}`, {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: "New Website Booking Inquiry!",
+                Name: data.name,
+                Date: data.date,
+                Location: data.location
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
             btn.textContent = 'Request Received';
             btn.style.backgroundColor = 'var(--accent-navy)';
             btn.style.color = 'var(--bg-dark)';
@@ -51,8 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.textContent = originalText;
                 btn.style.backgroundColor = 'transparent';
                 btn.style.color = 'var(--accent-navy)';
+            }, 4000);
+        })
+        .catch(error => {
+            console.log(error);
+            btn.textContent = 'Error. Try Again.';
+            setTimeout(() => {
+                btn.textContent = originalText;
             }, 3000);
-        }, 1500);
+        });
     });
 
     // Custom Cursor Logic
