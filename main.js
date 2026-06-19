@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify({
                 _subject: "New Website Booking Inquiry!",
                 Name: data.name,
+                Email: data.email,
+                Phone: data.phone,
                 Date: data.date,
                 Location: data.location
             })

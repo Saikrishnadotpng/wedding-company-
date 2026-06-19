@@ -692,7 +692,12 @@ body.loaded .preloader-logo {
     }
     
     .masonry-grid {
-        column-count: 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+    }
+    .masonry-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
 
@@ -709,7 +714,12 @@ body.loaded .preloader-logo {
     }
     
     .masonry-grid {
-        column-count: 1;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 350px;
+    }
+    .masonry-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     .desktop-nav {
