@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaliyanaa Kompany | Luxury Wedding Photography</title>
+    <meta name="description" content="Partners for life, capturing yours. Kaliyanaa Kompany is a premium wedding photography studio based in Kerala.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Film Grain -->
+    <svg class="film-grain" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+    </svg>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Kaliyanaa Kompany Logo" class="logo-img">
+            <div class="logo">Kaliyanaa Kompany</div>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#about" class="magnetic">About</a></li>
+                <li><a href="#portfolio" class="magnetic">Portfolio</a></li>
+                <li><a href="#booking" class="btn-book magnetic">Book Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+            <li><a href="#booking" class="btn-book mobile-link">Book Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-slider">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            <div class="slide slide-4"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-up-hero">Partners for life,</h1>
+            <h2 class="fade-up-hero delay-1">capturing yours.</h2>
+            <p class="fade-up-hero delay-2">Premium Wedding Photography Studio</p>
+        </div>
+        <div class="scroll-indicator fade-up-hero delay-3">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container split-layout">
+            <div class="about-text scroll-appear">
+                <h2 class="reveal-text"><span>The</span> <span>Visionaries</span></h2>
+                <p>We are a real-life couple, combining our unique perspectives to craft timeless narratives of love. With a deep appreciation for authentic moments and editorial elegance, we treat every wedding as a cinematic masterpiece.</p>
+                <div class="signature">K & K</div>
+            </div>
+            <div class="about-image scroll-appear">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="The Founders">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title scroll-appear">Selected Works</h2>
+            <div class="masonry-grid">
+                <div class="masonry-item scroll-appear parallax" data-speed="0.05">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="The Royal Wedding">
+                    <div class="work-overlay">
+                        <h3>The Royal Wedding</h3>
+                        <p>Udaipur Palace, Rajasthan</p>
+                    </div>
+                </div>
+                <div class="masonry-item scroll-appear parallax" data-speed="0.12">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="A Seaside Romance">
+                    <div class="work-overlay">
+                        <h3>A Seaside Romance</h3>
+                        <p>Kovalam Beach, Kerala</p>
+                    </div>
+                </div>
+                <div class="masonry-item scroll-appear parallax" data-speed="0.08">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Heritage Charm">
+                    <div class="work-overlay">
+                        <h3>Heritage Charm</h3>
+                        <p>Fort Kochi, Kerala</p>
+                    </div>
+                </div>
+                <div class="masonry-item scroll-appear parallax" data-speed="0.15">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forest Elopement">
+                    <div class="work-overlay">
+                        <h3>Forest Elopement</h3>
+                        <p>Wayanad, Kerala</p>
+                    </div>
+                </div>
+                <div class="masonry-item scroll-appear parallax" data-speed="0.06">
+                    <img src="https://images.unsplash.com/photo-1583939000240-690e16bfd5ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Backwater Love">
+                    <div class="work-overlay">
+                        <h3>Backwater Love</h3>
+                        <p>Kumarakom, Kerala</p>
+                    </div>
+                </div>
+                <div class="masonry-item scroll-appear parallax" data-speed="0.11">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="The Grand Reception">
+                    <div class="work-overlay">
+                        <h3>The Grand Reception</h3>
+                        <p>Taj Mahal Palace, Mumbai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+        <div class="container booking-container scroll-appear">
+            <div class="booking-header">
+                <h2 class="reveal-text"><span>Let's</span> <span>create</span> <span>art.</span></h2>
+                <p>Reserve your date in Kerala or worldwide.</p>
+            </div>
+            <form id="booking-form" class="minimal-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" " />
+                    <label for="name">Your Names</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" name="date" required placeholder=" " />
+                    <label for="date" class="date-label">Wedding Date</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="location" name="location" required placeholder=" " />
+                    <label for="location">Location (Kerala / Global)</label>
+                </div>
+                <button type="submit" class="btn-submit magnetic">Begin Your Story</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">Kaliyanaa Kompany</div>
+            <p>&copy; 2026 Kaliyanaa Kompany. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
