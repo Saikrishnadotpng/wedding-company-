@@ -729,6 +729,26 @@ body.loaded .preloader-logo {
     letter-spacing: 2px;
 }
 
+.mobile-close-item {
+    margin-top: 2rem;
+}
+
+.mobile-close-text {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: color 0.3s ease;
+}
+
+.mobile-close-text:hover {
+    color: var(--accent-navy);
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     #about, #portfolio, #booking {

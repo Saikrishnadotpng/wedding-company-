@@ -200,6 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('toggle');
             });
         });
+
+        const mobileCloseBtn = document.querySelector('.mobile-close-text');
+        if (mobileCloseBtn) {
+            mobileCloseBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('toggle');
+            });
+        }
     }
 
     // Hero Slider Logic
